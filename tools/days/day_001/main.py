@@ -1,4 +1,5 @@
-# Day 1 - idabblewith
+# Day 1
+# Updated 2023, Jarid Prince
 
 from days.day_001.files.helpers import *
 

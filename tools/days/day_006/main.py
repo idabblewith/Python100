@@ -1,4 +1,5 @@
-# Day 6 - BMI Checker
+# Day 6
+# Updated 2023, Jarid Prince
 
 from days.day_006.files.helpers import *
 

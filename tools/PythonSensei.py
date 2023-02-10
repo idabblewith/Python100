@@ -33,7 +33,7 @@ class PythonSensei:
 
 
 # Instantiates PythonSensei and allows users to select a program
-# (If run directly)
+# (If run directly or multithreaded days)
 if __name__ == "__main__":
     import misc
     from ProgramViewer import ProgramViewer
@@ -42,9 +42,13 @@ if __name__ == "__main__":
 
     sensei = PythonSensei()
     sensei.select_program()
-
-# (If run via start.py or another program)
+elif __name__.startswith("__mp_main__"):
+    import misc
+    from ProgramViewer import ProgramViewer
+    from ProgramLauncher import ProgramLauncher
+    import sys, gc
 else:
+    print(__name__)
     from tools.misc import *
     from tools.ProgramViewer import ProgramViewer
     from tools.ProgramLauncher import ProgramLauncher

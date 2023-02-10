@@ -14,8 +14,43 @@ PythonSensei is a program that runs 100 Python projects which were created over 
 The program uses three main classes to access files for each day in the 
 Python 100 Bootcamp: PythonSensei, PythonViewer, PythonLauncher
 
+## Additional Setup
+
+### Running locally
+You must create a virtual environment, enter it, and return to original directory:
+   - Navigate to file directory of start.py via console
+   - Run the following code:
+      python -m venv && cd "${PWD}/venv/Scripts" && source activate && cd "../.."
+   
+You must pip install requirements.txt: 
+   pip install -r requirements.txt
+
+   This will install the following libraries & their dependencies:
+   - Scapy (pip install scapy)
+   - Colorgram (pip install colorgram.py)
+   - Pandas (pip install pandas)
+
+You must run start.py via the virtual machine.
+   py start.py
+
+PROGRAM SPECIFIC (OS):
+   - P13: Install [Npcap](https://npcap.com/dist/npcap-1.72.exe)/NMap to your OS.
+
+### Credentials
+Many programs require credentials. You will be prompted for credentials
+if you have not already provided them. The following programs will require
+credentials to run:
+   <!-- -  -->
+<!-- You must provide credentials for programs: []
+You can fill these credentials in the .env file -->
+
 <!-- 
 NOTES/BUGS:
+GENERAL CREATE A CHECK TO SEE IF CREDENTIAL FOR SELECTED DAY IS AVAILABLE
+IF NOT ASK USER FOR IT, INPUT IT, AND RERUN THE DAY. IF ERROR CRED, INFORM USER ON ATTEMPT & RETURN (Create error message in misc).
+OTHERWISE RETURN TO SELECTION (if user does not provide).
+
+Day 13 - TO PREVENT ERROR, FIND A WAY TO CHECK IF NPCAP INSTALLED AND EXIT IF NOT
 Day 17 - Goes until Q50, need to add quit button and show how many q left
 All tkinter (D19, 20, 21, 22, 25, 27, 28, 29, 30) - focus no longer set to new open window
 Day 22 - Error shown on close (tclerror), and strange speed up of ball

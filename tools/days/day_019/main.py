@@ -20,7 +20,7 @@ def day_019():
         screen.bye()
 
 
-# Creates the application window with Tkinter
+# Creates the application window with Turtle
 def setup_screen(screen):
     screen.title("Turtle Art")
     width = 1000

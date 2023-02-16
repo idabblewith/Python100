@@ -29,6 +29,10 @@ You must pip install requirements.txt:
    - Scapy (pip install scapy)
    - Colorgram (pip install colorgram.py)
    - Pandas (pip install pandas)
+   - Pyperclip (pip install pyperclip)
+   - Python Dotenv (pip install python_dotenv)
+   - Requests (pip install requests)
+   - Twilio (pip install twilio)
 
 You must run start.py via the virtual machine.
    py start.py
@@ -36,13 +40,16 @@ You must run start.py via the virtual machine.
 PROGRAM SPECIFIC (OS):
    - P13: Install [Npcap](https://npcap.com/dist/npcap-1.72.exe)/NMap to your OS.
 
-### Credentials
+<!-- ### Credentials
 Many programs require credentials. You will be prompted for credentials
 if you have not already provided them. The following programs will require
 credentials to run:
-   <!-- -  -->
-<!-- You must provide credentials for programs: []
-You can fill these credentials in the .env file -->
+32, 33 (REWORK EMAIL)
+35 (TWILIO, OPENWEATHER)
+
+ -->
+
+<!-- You can prefill these credentials in the .env file -->
 
 <!-- 
 NOTES/BUGS:

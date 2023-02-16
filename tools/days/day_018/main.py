@@ -3,7 +3,7 @@
 
 from days.day_018.files.helpers import *
 
-# Main logic - creates screen with Tkinter
+# Main logic - creates screen with Turtle
 def day_018():
     title("TURTLE ART")
     nls("Watch the art! :)")

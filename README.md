@@ -1,4 +1,4 @@
-## PythonSensei
+   ## PythonSensei
 
 ![PythonSensei](https://github.com/jprincedev/PythonSensei/blob/main/tools/sensei.jpg?raw=true)
 
@@ -6,13 +6,13 @@
 
 ## Introduction
 
-PythonSensei is a program that runs 100 Python projects which were created over the course of 100 Days.<br>The 100 programs that PythonSensei can run are primarily based on [Angela Yu's 100 Days of Code Udemy Course](https://www.udemy.com/course/100-days-of-code), range from beginner to professional, and are optomised to be run via selection via CLI. As some require protected information such as passwords and emails, they have either been swapped out or cannot be run from the console (The code can still be viewed).
+PythonSensei is a program that runs 100 Python projects which were created over the course of 100 Days.<br>The 100 programs that PythonSensei can run are primarily based on [Angela Yu's 100 Days of Code Udemy Course](https://www.udemy.com/course/100-days-of-code), range from beginner to professional, and are optomised to be run via selection via CLI. As some programs require protected information such as API Keys, passwords and emails, those programs let the user know that they must first fill out a .env file with the required credentials to run the program.
 
 
 ## How it works
 
 The program uses three main classes to access files for each day in the 
-Python 100 Bootcamp: PythonSensei, PythonViewer, PythonLauncher
+Python 100 Bootcamp: PythonSensei, PythonViewer, PythonLauncher. These classes call the relevant day according to user input.
 
 ## Additional Setup
 
@@ -33,6 +33,8 @@ You must pip install requirements.txt:
    - Python Dotenv (pip install python_dotenv)
    - Requests (pip install requests)
    - Twilio (pip install twilio)
+   - Beautiful Soup (pip install beautifulsoup4)
+   - Lxml (pip install lxml)
 
 You must run start.py via the virtual machine.
    py start.py
@@ -45,24 +47,17 @@ Many programs require credentials. You will be prompted for credentials (in a .e
 if you have not already provided them. The following programs will require
 credentials to run:
 - 32, 33 (MY_EMAIL, MY_EMAIL_PASSWORD, MY_OTHER_EMAIL)
-- 35 (OPENWEATHER, TWILIO ID, NUM, TOKEN, MY_NUMBER) 
-- 36 (STOCK, NEWS, TWILIO ID, NUM, TOKEN, MY_NUMBER) 
-- 37 (PIXELA_USER, PIXELA_TOKEN)
-- 38 (NUTRITIONIX_API_KEY, NUTRITIONIX_APP_ID, SHEETY_BEARER)
-- 39 (SHEETY_FLIGHT_URL, TEQUILA_API_KEY, TWILIO ID, NUM, TOKEN, MY_NUM)
-- 40 (SHEETY_FLIGHT_URL, SHEETY_FLIGHT_USER_ENDPOINT, TEQUILA_API_KEY, MY_EMAIL, MY_EMAIL_PASSWORD)
+- 35 ([OPENWEATHER](https://home.openweathermap.org/api_keys), [TWILIO ID](https://www.twilio.com/docs/sms/quickstart/python), NUM, TOKEN, MY_NUMBER) 
+- 36 ([STOCK](https://www.alphavantage.co/documentation/ ), [NEWS](https://newsapi.org/account), [TWILIO ID](https://www.twilio.com/docs/sms/quickstart/python), NUM, TOKEN, MY_NUMBER) 
+- 37 ([PIXELA_USER](https://docs.pixe.la), PIXELA_TOKEN)
+- 38 ([NUTRITIONIX_API_KEY](https://developer.nutritionix.com/admin/access_details), NUTRITIONIX_APP_ID, [SHEETY_BEARER](https://dashboard.sheety.co/))
+- 39 ([SHEETY_FLIGHT_URL](https://dashboard.sheety.co/), [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/docs/tequila_api/search_api), [TWILIO ID](https://www.twilio.com/docs/sms/quickstart/python), NUM, TOKEN, MY_NUMBER)
+- 40 ([SHEETY_FLIGHT_URL](https://dashboard.sheety.co/), SHEETY_FLIGHT_USER_ENDPOINT, [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/docs/tequila_api/search_api), MY_EMAIL, MY_EMAIL_PASSWORD)
 
 
-<!-- https://www.twilio.com/docs/sms/quickstart/python
-https://home.openweathermap.org/api_keys
-https://www.alphavantage.co/documentation/  
-https://newsapi.org/account
-
-37 (PIXELA TOKEN & USER) https://docs.pixe.la
-38 (NUTRITIONIX) https://developer.nutritionix.com/admin/access_details -->
-
-
-<!-- You can prefill these credentials in the .env file -->
+<!-- You can create a .env file at the root directory of the project with the following command: touch .env 
+   Prefill these credentials using the keywords below:
+-->
 
 <!-- 
 NOTES/BUGS:

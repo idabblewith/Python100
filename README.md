@@ -40,14 +40,27 @@ You must run start.py via the virtual machine.
 PROGRAM SPECIFIC (OS):
    - P13: Install [Npcap](https://npcap.com/dist/npcap-1.72.exe)/NMap to your OS.
 
-<!-- ### Credentials
-Many programs require credentials. You will be prompted for credentials
+### Credentials
+Many programs require credentials. You will be prompted for credentials (in a .env file @ root)
 if you have not already provided them. The following programs will require
 credentials to run:
-32, 33 (REWORK EMAIL)
-35 (TWILIO, OPENWEATHER)
+- 32, 33 (MY_EMAIL, MY_EMAIL_PASSWORD, MY_OTHER_EMAIL)
+- 35 (OPENWEATHER, TWILIO ID, NUM, TOKEN, MY_NUMBER) 
+- 36 (STOCK, NEWS, TWILIO ID, NUM, TOKEN, MY_NUMBER) 
+- 37 (PIXELA_USER, PIXELA_TOKEN)
+- 38 (NUTRITIONIX_API_KEY, NUTRITIONIX_APP_ID, SHEETY_BEARER)
+- 39 (SHEETY_FLIGHT_URL, TEQUILA_API_KEY, TWILIO ID, NUM, TOKEN, MY_NUM)
+- 40 (SHEETY_FLIGHT_URL, SHEETY_FLIGHT_USER_ENDPOINT, TEQUILA_API_KEY, MY_EMAIL, MY_EMAIL_PASSWORD)
 
- -->
+
+<!-- https://www.twilio.com/docs/sms/quickstart/python
+https://home.openweathermap.org/api_keys
+https://www.alphavantage.co/documentation/  
+https://newsapi.org/account
+
+37 (PIXELA TOKEN & USER) https://docs.pixe.la
+38 (NUTRITIONIX) https://developer.nutritionix.com/admin/access_details -->
+
 
 <!-- You can prefill these credentials in the .env file -->
 

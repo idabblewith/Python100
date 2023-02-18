@@ -6,7 +6,7 @@ from days.day_035.files.helpers import *
 
 def day_035():
     title("RAIN ALERT")
-    # Secrets now saved in one location - env
+    # VALIDATE DOT ENV & API KEYS
     nls(
         "NOTE: This file requires that you fill in the .env file'\nOPEN_WEATHER_API, TWILIO_ID, TWILIO_TOKEN, TWILIO_NUMBER & MY_PHONE_NUMBER values."
     )
@@ -42,9 +42,10 @@ def day_035():
                 error_env_msg(f"Error with credential: {cred}")
                 env_error = True
 
+    # RUN ONLY IF NO ERRORS WITH ENV KEYS
     if not env_error:
         nls("Credentials are present. Checking Weather API for Perth...")
-
+        # Preparing API parameters for request & sending, raising error if one present
         params = {
             "lat": -31.9333,
             "lon": 115.8333,
@@ -55,10 +56,8 @@ def day_035():
         response = requests.get(
             url="https://api.openweathermap.org/data/3.0/onecall", params=params
         )
-        # # Debug
-        # print(response.json())
-        # print(response.request.url)
         response.raise_for_status()
+        # Format to JSON and determine wheteher it will rain in the next 12 hours (code less than 700 means rain)
         data = response.json()
         will_rain = False
         next_12 = data["hourly"][:12]
@@ -66,6 +65,7 @@ def day_035():
             weather_code = hour["weather"][0]["id"]
             if weather_code < 700:
                 will_rain = True
+        # Create a Twilio client and determine message based on whether it will rain
         nls("Checking Twilio details...")
         if will_rain:
             client = Client(TWILIO_ID, TWILIO_TOKEN)

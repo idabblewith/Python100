@@ -3,7 +3,7 @@ from days.day_044.files.helpers import *
 
 def day_044():
     title("PERSONAL SITE")
-    chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe %s"
+    chrome_path = "C:/Program Files/Google/Chrome/Application/chrome.exe"
 
     # Locate chrome driver and use it to open index.html
     try:

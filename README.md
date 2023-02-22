@@ -35,6 +35,9 @@ You must pip install requirements.txt:
    - Twilio (pip install twilio)
    - Beautiful Soup (pip install beautifulsoup4)
    - Lxml (pip install lxml)
+   - Spotipy (pip install spotipy)
+   - Selenium (pip install selenium)
+   - Undetected Chromedriver (pip install undetected-chromedriver)
 
 You must run start.py via the virtual machine.
    py start.py
@@ -53,6 +56,8 @@ credentials to run:
 - 38 ([NUTRITIONIX_API_KEY](https://developer.nutritionix.com/admin/access_details), NUTRITIONIX_APP_ID, [SHEETY_BEARER](https://dashboard.sheety.co/))
 - 39 ([SHEETY_FLIGHT_URL](https://dashboard.sheety.co/), [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/docs/tequila_api/search_api), [TWILIO ID](https://www.twilio.com/docs/sms/quickstart/python), NUM, TOKEN, MY_NUMBER)
 - 40 ([SHEETY_FLIGHT_URL](https://dashboard.sheety.co/), SHEETY_FLIGHT_USER_ENDPOINT, [TEQUILA_API_KEY](https://tequila.kiwi.com/portal/docs/tequila_api/search_api), MY_EMAIL, MY_EMAIL_PASSWORD)
+- 46 ([SPOTIFY_CLIENT_ID](https://developer.spotify.com/dashboard/), SPOTIFY_CLIENT_SECRET)
+- 47 (MY_EMAIL, MY_EMAIL_PASSWORD)
 
 
 <!-- You can create a .env file at the root directory of the project with the following command: touch .env 
